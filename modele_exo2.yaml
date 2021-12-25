@@ -1,0 +1,70 @@
+backend: tensorflow
+class_name: Sequential
+config:
+  layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple
+      - null
+      - 784
+      dtype: float32
+      name: fc1_input
+      ragged: false
+      sparse: false
+  - class_name: Dense
+    config:
+      activation: linear
+      activity_regularizer: null
+      batch_input_shape: !!python/tuple
+      - null
+      - 784
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dtype: float32
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      name: fc1
+      trainable: true
+      units: 100
+      use_bias: true
+  - class_name: Activation
+    config:
+      activation: sigmoid
+      dtype: float32
+      name: activation
+      trainable: true
+  - class_name: Dense
+    config:
+      activation: linear
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dtype: float32
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      name: sortie
+      trainable: true
+      units: 10
+      use_bias: true
+  - class_name: Activation
+    config:
+      activation: softmax
+      dtype: float32
+      name: activation_1
+      trainable: true
+  name: sequential
+keras_version: 2.4.0
