@@ -12,8 +12,12 @@ from keras.utils import np_utils
 
 # Création du modèle
 model = Sequential()
+
+# Ajout des couches cachées
 model.add(Dense(10, input_dim=784, name='fc1'))
 model.add(Activation('softmax'))
+
+# Taux d'apprentissage
 learning_rate = 0.1
 sgd = SGD(learning_rate)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
