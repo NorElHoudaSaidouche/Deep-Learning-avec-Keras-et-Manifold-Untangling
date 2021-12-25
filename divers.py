@@ -1,5 +1,5 @@
 """
-TP 1 - Deep Learning avec Keras et Manifold Untangling
+TP 2 - Deep Learning avec Keras et Manifold Untangling
 Implémentation des fonctions
 Fait par : SAIDOUCHE Nor El Houda & HANACHI Ourida
 """
