@@ -39,7 +39,7 @@ Y_test = np_utils.to_categorical(y_test, 10)
 
 # Apprentissage
 batch_size = 100
-nb_epoch = 20
+nb_epoch = 100
 model.fit(X_train, Y_train, batch_size=batch_size, epochs=nb_epoch, verbose=1)
 
 # Evaluation du modèle

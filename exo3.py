@@ -58,7 +58,7 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 
 # Apprentissage
 batch_size = 100
-nb_epoch = 20
+nb_epoch = 100
 model.fit(X_train, Y_train, batch_size=batch_size, epochs=nb_epoch, verbose=1)
 
 # Evaluation du modèle
